@@ -31,7 +31,7 @@ if [[ "$HOG_TYPE" == "cpu" ]]; then
 
     envsubst < cpu-hog.conf.template > hog-jobfile.conf
 elif [[ "$HOG_TYPE" == "memory" ]]; then
-    export VM_BYTES=${VM_BYTES:="10%"}
+    export VM_BYTES=${VM_BYTES:="1g"}
     export VM_WORKERS=${WORKERS:=2}
 
     echo "number of memory workers: $VM_WORKERS"
